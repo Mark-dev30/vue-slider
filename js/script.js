@@ -41,6 +41,19 @@ const { createApp } = Vue
             this.activateItems = index;
         },
 
+        next(){
+            this.activateItems++;
+            if(this.activateItems > this.slides.length - 1){
+                this.activateItems = 0;
+            }
+        },
         
-    },
+        prev(){
+            this.activateItems--;
+            if(this.activateItems < 0){
+                this.activateItems = this.slides.length - 1;
+            }
+        },
+
+    }
   }).mount('#app')
