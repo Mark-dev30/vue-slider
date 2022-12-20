@@ -36,6 +36,9 @@ const { createApp } = Vue
             ],
         }
     },
+    created(){
+        this.startAutoplay();
+    },
     methods: {
         
         changeImage(index){
